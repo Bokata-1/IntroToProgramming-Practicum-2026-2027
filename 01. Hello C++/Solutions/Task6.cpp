@@ -18,7 +18,7 @@ int main()
 
     short units = num % 10;
     short tens = (num / 10) % 10;
-    short hundreds = (num / 100) % 10;
+    short hundreds = num / 100;
 
     std::cout << "units: " << units << "\n";
     std::cout << "tens: " << tens << "\n";
