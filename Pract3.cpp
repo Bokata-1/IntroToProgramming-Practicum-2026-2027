@@ -80,5 +80,29 @@
  //}
  //if(expr == 0){
  //    std::cout << number % 10;
- //}
+ //} 
+    shesta
+   long long numberSec;
+    std::cin >> numberSec;
+    int numberSecCopy = numberSec;
+    int number = 0;
+    int length = 0;
+    while (numberSecCopy != 0) {
+        length++;
+        numberSecCopy = numberSecCopy/10 ;
+    }
+    for (int i = 0;i < length;i++) {
+        int stepen = 1;
+        int iCopy = i;
+        while (iCopy > 0) {
+            stepen = stepen * 2;
+            iCopy--;
+        }
+        number = number + stepen * (numberSec % 10);
+        numberSec = numberSec / 10;
+    }
+    std::cout << number;
+
+    
+}
 //}
