@@ -130,5 +130,53 @@ Sedma -  ne znam
     case 5:
         std::cout << a % b;
         break;
+    } 
+     deveta
+     int a, b, c;
+    std::cin >> a >> b >> c;
+    if (a + b < c || a + c < b || b + c < a) {
+        std::cout << "Not a triangle";
+    }
+    if (a == b && b == c) {
+        std::cout << "Equilateral , Acute";
+    }
+    else if (a == b || b == c || a == c) {
+        std::cout << "Isosceles";           
+    }
+    else {
+        std::cout << "Scalene";
+    }
+    if (a < b&&b>c) {
+        if (b*b==a*a+c*c) {
+            std::cout << "Right ";
+        }
+        else if (b * b > a * a + c * c) {
+            std::cout << "Obtuse";
+        }
+        else if(b * b > a * a + c * c) {
+            std::cout << "Acute";
+        }
+    }
+    if (a < c && b<c) {
+        if (c * c == a * a + b * b) {
+            std::cout << "Right ";
+        }
+        else if (c * c > a * a + b * b) {
+            std::cout << "Obtuse";
+        }
+        else if(c * c < a * a + b * b){
+            std::cout << "Acute";
+        }
+    }
+    if (a > b && a>c) {
+        if (a * a == b * b + c * c) {
+            std::cout << "Right ";
+        }
+        else if (a * a > b * b + c * c) {
+            std::cout << "Obtuse";
+        }
+        else if(a * a < b * b + c * c) {
+            std::cout << "Acute";
+        }
     }
 }
