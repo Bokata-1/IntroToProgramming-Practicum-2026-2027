@@ -105,4 +105,30 @@ int main()
 	//}
 	 
 	}
+Sedma -  ne znam
+    Osma
+    int a, b;
+    std::cout << "Enter numbers";
+    std::cin >> a >> b;
+    std::cout << "Choose: \n1)+\n2)-\n3)*\n4)/\n5)%";
+    int number;
+    std::cin >> number;
+    switch (number) 
+    {
+    case 1:
+        std::cout << a + b;
+        break;
+    case 2:
+        std::cout << a - b;
+        break;
+    case 3:
+        std::cout << a * b;
+        break;
+    case 4:
+        std::cout << a / b;
+        break;
+    case 5:
+        std::cout << a % b;
+        break;
+    }
 }
