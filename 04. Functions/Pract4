@@ -1,0 +1,55 @@
+int countDigits(int number) {
+	int counter = 0;
+	while (number != 0) {
+		counter++;
+		number = number / 10;
+	}
+	return counter;
+}
+int square(int x) {
+	return x * x;
+}
+int sumOfSquares(int number) {
+	int sum = 0;
+	for (int i = 1; i <= number; i++) {
+		sum = sum + square(i);
+	}
+	return sum;
+}
+void circle(double a, double b,double c,double d) {
+	if (square(a) + square(b) == square(c) + square(d)) {
+		std::cout << "Yes";
+	}
+	else {
+		std::cout << "No";
+	}
+}
+int modul(int number) {
+	if (number > 0) {
+		return number;
+	}
+	return number * (-1);
+}
+double getLengthFromCoordinates(int x, int y,int a, int b) {
+	return  sqrt(square(modul(x - a)) + square(modul(y - b)));
+}
+double getPerimitur(int a, int b, int c, int d, int x, int y) {
+	double purvaStrana = getLengthFromCoordinates(a, b, x, y);
+	double vtoraStrana = getLengthFromCoordinates(a,b,c,d);
+	double tretaStrana = getLengthFromCoordinates(x,y,c,d);
+	return purvaStrana + vtoraStrana + tretaStrana;
+
+}
+bool areCollinear(int x1,int y1,int x2,int y2,int x3,int y3) {
+	if (x1 * (y2 - y3) + x2*(y3 - y1) + x3*(y1 - y2) == 0) {
+		return 1;
+	}
+	else {
+		return 0;
+	}
+	
+}
+int main()
+{
+	std::cout << areCollinear(0,0,1,1,2,2);
+}
